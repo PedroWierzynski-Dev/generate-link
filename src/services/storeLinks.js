@@ -28,3 +28,12 @@ export async function saveLink(key, newLink){
 
 
 //Deletar links
+export function deleteLink(Links, id){
+	let myLinks = Links.filter( item => {
+		return(item.id !== id)
+	})
+
+	localStorage.setItem('@encurtaLink', JSON.stringify(myLinks))
+	alert('LINK DELETADO COM SUCESSO')
+
+}
